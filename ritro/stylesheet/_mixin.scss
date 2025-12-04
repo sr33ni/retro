@@ -1,0 +1,35 @@
+$xs: "screen and (min-width:" + (320px) + ")";
+$sm: "screen and (min-width:" + (480px) + ")";
+$md: "screen and (min-width:" + (768px) + ")";
+$lg: "screen and (min-width:" + (950px) + ")";
+$xl: "screen and (min-width:" + (1199px) + ")";
+$xxl: "screen and (min-width:" + (1320px) + ")";
+$xxxl: "screen and (min-width:" + (1440px) + ")";
+
+
+@mixin Flexbox($direction: row, $justify: flex-start, $align: stretch) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+$viewport: 1440;
+$bodySize: 16;
+$bodyFontSize: 16px;
+
+@function vw($target) {
+    $vw-context: (
+        $viewport * 0.01
+    );
+@return ($target / $vw-context) * 1vw;
+}
+
+@function rem($value) {
+    $newValue: calc($value / $bodySize * 1rem);
+    @return $newValue;
+}
+
+@function px2rem($px) {
+    @return calc($px / $bodyFontSize) * 1rem;
+}
