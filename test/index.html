@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header role="banner">
+        <div class="site-branding">
+            <a href="/home" aria-label="Homepage – Brand Name">
+                <img src="logo.svg" alt="Brand Name logo" width="140" height="40" loading="eager" />
+            </a>
+        </div>
+
+        <nav aria-label="Primary navigation">
+            <ul>
+                <li><a href="/home" aria-current="page">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/services">Services</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-actions" role="group" aria-label="Header actions">
+            <a href="/login" class="btn btn-secondary"> Login </a>
+            <a href="/contact" class="btn btn-primary"> Get in Touch </a>
+
+            <button type="button" onclick="toggleTheme()" aria-pressed="false" id="themeToggle">Dark Mode</button>
+        </div>
+    </header>
+    <main id="main-content">
+        <section id="section-banner" class="section-banner box-to-observe-top">
+            <a href="/new" aria-current="page">new</a>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
